@@ -1,0 +1,403 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>B793196</title> 
+    <style>
+        * {
+            margin: 0; padding: 0;
+            font-family: 'Malgun Gotic', sans-serif;
+        }
+
+        a { text-decoration: none; }
+        img { border: 0; }
+        li { list-style: none; }
+        html { background: #f7f5f5; }
+    </style>
+
+    <style>
+        #main-header {
+            height: 40px;
+            background: #faf7f7;
+
+            position: relative;
+        }
+
+        .header-search-form {
+            float: left;
+        }
+
+        .header-title {
+            position: absolute;
+            width: 200px; height:  40px;
+            left: 50%; margin-left: -100px;
+            background: url('logo.png');
+            background-repeat: no-repeat;
+
+            text-indent: -9999px;
+        }
+
+        .header-menu {
+            float: right;
+        }
+    </style>
+
+    <style>
+        .outer-menu {
+            float: left;
+            width: 100px; height: 20px;
+            line-height: 20px;
+            padding: 10px 0;
+            position: relative;
+            text-align: center;
+
+            font-size: 13px;
+            font-weight: bold;
+
+            z-index: 9999;
+        }
+
+        .outer-menu:hover { background: #E1DFDF; }
+
+        .inner-menu {
+            display: none;
+            background: #FFFFFF;
+            margin-top: 10px;
+            width: 100%;
+
+            border-top: 1px solid #cccaca;
+            box-shadow: 0 2px 4px rgba(34,25,25,0.5);
+        }
+
+        .inner-menu a {
+            display: block;
+            padding: 5px 10px;
+            z-index: 5000;
+        }
+
+        .inner-menu a:hover { background: #E1DFDF; }
+    </style>
+
+    <style>
+        #main-navigation {
+            height: 30px;
+            background: #faf7f7;
+            border-top: 1px solid #cfcaca;
+            box-shadow: 1px 3px 3px rgba(34, 25, 25, 0.4);
+        }
+
+        #main-navigation > ul {
+            overflow:hidden;
+            text-align: center;
+        }
+
+        #main-navigation > ul > li {
+            display: inline;
+
+            padding: 0 5px;
+
+            line-height: 30px;
+            font-size: 13px;
+            color: #524D4D;
+            text-shadow: 0 1px 1px white;
+        }
+
+        #main-navigation > ul > li:hover { 
+            background: #E1DFDF;
+            border-radius: 2px;
+        }
+    </style>
+
+    <style>
+        .header-search-form {
+            height: 26px;
+            padding: 7px;
+        }
+
+        .input-search {
+            display: block;
+            float: left;
+
+            background-color: #FFFFFF;
+            border: 1px solid #CCCCCC;
+            border-radius: 15px 0 0 15px;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+
+            width: 120px; height: 24px;
+            padding: 0 0 0 10px;
+            font-size: 12px;
+            color: #555555;
+        }
+
+        .input-search:focus {
+            border-color: rgba(82, 168, 236, 0.8);
+            outline: 0;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+        }
+
+        .input-search-submit {
+            display: block;
+            float: left;
+
+            width: 50px; height: 26px;
+            border-radius: 0 15px 15px 0;
+            border: 1px solid #CCCCCC;
+
+            margin-left: -1px;
+
+            vertical-align: top;
+            display: inline-block;
+        }
+
+    </style>
+
+    <style>
+        .paper {
+            width: 190px;
+            margin-top: 10px;
+            padding: 15px 15px 0;
+            font-size: 11px;
+            background: #FFFFFF;
+            box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+        }
+
+        .paper-content {
+            margin: 0 -15px;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background: #F2F0F0;
+
+            overflow: hidden;
+        }
+
+        .paper-description {
+            margin: 10px 0;
+        }
+
+        .paper-link {
+            display: block;
+            float: left;
+        }
+
+        .paper-text {
+            float: left;
+            width: 150px;
+            margin-left: 10px;
+        }
+    </style>
+
+    <style>
+
+        #main-section {
+            width: 920px;
+            margin: 0 auto;
+        }
+
+        /* 3줄 */
+        @media (max-width: 919px) {
+            #main-section { width: 690px; }
+        } 
+
+        /* 4줄 */
+        @media (min-width: 920px) and (max-width:1149px) {
+            #main-section { width: 920px; }
+        } 
+
+        /* 5줄 */
+        @media (min-width:1150px) and (max-width:1379px) {
+            #main-section { width: 1150px; }
+        }
+
+        /* 6줄 */
+        @media (min-width:1380px) {
+            #main-section { width: 1380px; }
+        }
+    </style>
+
+    <style>
+        #darken-background {
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 100%; 
+
+            display: none;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 10000;
+            overflow-y: scroll;
+        }
+
+        #lightbox {
+            width: 700px;
+            margin: 20px auto; padding: 15px;
+
+            border: 1px solid #333333;
+            border-radius: 5px;
+            background: white;
+            box-shadow: 0 5px 5px rgba(34, 25, 25, 0.4);
+
+            text-align: center;
+        }
+
+        .user-information {  overflow: hidden;  text-align: left; }
+        .user-information-image { float: left; width: 70px; }
+        .user-information-text { float: right; width: 620px;  }
+        .lightbox-splitter { margin: 10px 0; }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="jquery.masonry.min.js"></script>
+    <script src="jquery.imagesloaded.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+
+            $('.outer-menu').hover(function () {
+                $(this).find('.inner-menu').css('display', 'block');
+            }, function () {
+                $(this).find('.inner-menu').css('display', 'none');
+            });
+        });
+
+        
+        $(document).ready(function () {
+
+            $('#main-section').imagesLoaded(function () {
+
+                $('#main-section').masonry({
+                    itemSelector: '.paper',
+                    columnWidth: 230,
+                    isAnimated: true
+                });
+            });
+});
+          
+        
+
+        $(document).ready(function () {
+            function showLightBox() {
+
+                $('#darken-background').show();
+                $('#darken-background').css('top', $(window).scrollTop());
+
+                $('body').css('overflow', 'hidden');
+            }
+
+            function hideLightBox() {
+ 
+                $('#darken-background').hide();
+
+                $('body').css('overflow', '');
+            }
+
+            $('#darken-background').click(function () {
+                hideLightBox();
+            });
+
+            $('.paper').click(function () {
+                showLightBox();
+            });
+
+            $('#lightbox').click(function (event) {
+                event.stopPropagation()
+            });
+        });
+    </script>
+</head> 
+<body> 
+
+    <header id="main-header"> 
+        <div class="header-search-form"> 
+            <form> 
+                <input type="search" class="input-search"> 
+                <input type="submit" class="input-search-submit" value="검색"> 
+            </form> 
+        </div> 
+        <h1 class="header-title">Interest</h1> 
+        <div class="header-menu"> 
+            <ul class="outer-menu"> 
+                <li> 
+                    <a href="#"> </a> 
+                    <ul class="inner-menu"> 
+                    </ul> 
+                </li> 
+            </ul> 
+            <ul class="outer-menu"> 
+                <li> 
+                    <a href="#"> </a> 
+                    <ul class="inner-menu"> 
+                    </ul> 
+                </li> 
+            </ul> 
+        </div> 
+    </header> 
+
+    <nav id="main-navigation"> 
+        <ul>  
+            <li><a href="#"> </a></li> 
+        </ul> 
+    </nav> 
+
+    <section id="main-section"> 
+         
+        <div class="paper"> 
+            <div class="paper-holder"> 
+                <a><img width="190" src="https://cafeptthumb-phinf.pstatic.net/MjAyMjA0MjVfMTQx/MDAxNjUwODYwNjQxODYw.8Ix_bXM3kfWuK9VdTz9-FsEiWpIXYV8heRBkl7EzBy4g.fvmcfm8JbBRr_V2de7cKtfJTO5cufVitBdsBgwiVqwIg.PNG/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C1.PNG?type=w1600"></a> 
+            </div> 
+            <p class="paper-description">아침이 오기 전에</p> 
+            <div class="paper-content"> 
+                <a class="paper-link" href="#"><img src="https://cafeptthumb-phinf.pstatic.net/MjAyMjA0MjVfMTQx/MDAxNjUwODYwNjQxODYw.8Ix_bXM3kfWuK9VdTz9-FsEiWpIXYV8heRBkl7EzBy4g.fvmcfm8JbBRr_V2de7cKtfJTO5cufVitBdsBgwiVqwIg.PNG/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C1.PNG?type=w30"></a> 
+                <p class="paper-text">before the sunset, 어드벤처 게임.</p> 
+            </div> 
+        </div> 
+         
+        <div class="paper"> 
+            <div class="paper-holder"> 
+                <a><img width="190" src="https://cafeptthumb-phinf.pstatic.net/MjAyMjA0MjVfMjUz/MDAxNjUwODYxMDU5MzU3.n9L0YCJpZpjZTjLRlI-Oo9fE2jEo6lo4DK0_3sDPig0g.yQrZH6Ke1qEAcM_mcmvvJ1JS2GRnvMBA8o5lD_ozvAkg.PNG/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C5.PNG?type=w1600"></a> 
+            </div> 
+            <p class="paper-description">힐링형 게임</p> 
+            <div class="paper-content"> 
+                <a class="paper-link" href="#"><img src="https://cafeptthumb-phinf.pstatic.net/MjAyMjA0MjVfMjUz/MDAxNjUwODYxMDU5MzU3.n9L0YCJpZpjZTjLRlI-Oo9fE2jEo6lo4DK0_3sDPig0g.yQrZH6Ke1qEAcM_mcmvvJ1JS2GRnvMBA8o5lD_ozvAkg.PNG/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C5.PNG?type=w30"></a> 
+                <p class="paper-text">스토리형 힐링형 게임.</p> 
+            </div> 
+        </div> 
+         
+        <div class="paper"> 
+            <div class="paper-holder"> 
+                <a><img width="190" src="https://cafeptthumb-phinf.pstatic.net/MjAyMjA0MjVfNjYg/MDAxNjUwODYxNDc0OTc4.whuv-AzBl6gFft-v4_--PHoOG7vzZ38Qm53qnZdJIhsg.Yx7IUBWlUTEVkR7D2DwaBwH_ZNcRca70dQQvAIXL6Ocg.JPEG/0001.jpg?type=w1600"></a> 
+            </div> 
+            <p class="paper-description">뻐끔뻐끔 뽀모도로</p> 
+            <div class="paper-content"> 
+                <a class="paper-link" href="#"><img src="https://cafeptthumb-phinf.pstatic.net/MjAyMjA0MjVfNjYg/MDAxNjUwODYxNDc0OTc4.whuv-AzBl6gFft-v4_--PHoOG7vzZ38Qm53qnZdJIhsg.Yx7IUBWlUTEVkR7D2DwaBwH_ZNcRca70dQQvAIXL6Ocg.JPEG/0001.jpg?/30/30"></a> 
+                <p class="paper-text">일반 어플리케이션+게임성 +UXUI</p> 
+            </div> 
+        </div> 
+         
+        <div class="paper"> 
+            <div class="paper-holder"> 
+                <a><img width="190" src="https://cafeptthumb-phinf.pstatic.net/MjAyMjA2MTNfMTk4/MDAxNjU1MTA0NTUzNjE3.fRmPpiN5RnWENaFpBO-wJ0XDJPc03CnPwKmCx-WoWBsg.Ix30Rv0lXhfh-F7DwesSO1-iwjbO3BwY2v6fAcGV74Ig.JPEG/C1E22E10-3C0F-40B9-8F16-C1879B974DFB.jpeg?type=w1600"></a> 
+            </div> 
+            <p class="paper-description">러닝 어드벤처</p> 
+            <div class="paper-content"> 
+                <a class="paper-link" href="#"><img src="https://cafeptthumb-phinf.pstatic.net/MjAyMjA2MTNfMTk4/MDAxNjU1MTA0NTUzNjE3.fRmPpiN5RnWENaFpBO-wJ0XDJPc03CnPwKmCx-WoWBsg.Ix30Rv0lXhfh-F7DwesSO1-iwjbO3BwY2v6fAcGV74Ig.JPEG/C1E22E10-3C0F-40B9-8F16-C1879B974DFB.jpeg?type=w30"></a> 
+                <p class="paper-text">러닝 게임</p> 
+            </div> 
+        </div> 
+         
+         
+    </section> 
+
+    <div id="darken-background"> 
+        <div id="lightbox"> 
+            <div class="user-information"> 
+                <a class="user-information-image" href="#">
+                    <img src=" ">
+                </a> 
+                <div class="user-information-text">
+                    <h3>User</h3>
+                    <p>포트폴리오-이정은</p>
+                </div> 
+            </div>
+            <hr class="lightbox-splitter">
+            <img src="https://cafeptthumb-phinf.pstatic.net/MjAyMjEyMjFfMTM4/MDAxNjcxNTU1Mzc3MTI0.3UffKFDpA3S2F3kCVARuHJuGeClE40n_St1IpfJJGCUg.v091871YDKRpbIdY1dbzViBTejQq2bj6w1Ff33SBNckg.PNG/image.png?type=w1600"> 
+        </div> 
+    </div> 
+</body> 
+</html> 7
